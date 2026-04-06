@@ -1,0 +1,107 @@
+:root {
+  color-scheme: dark;
+  --bg: #101816;
+  --panel: #172320;
+  --text: #f6f1e4;
+  --muted: #aab6ac;
+  --accent: #d7ab60;
+  --border: rgba(255, 255, 255, 0.08);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background:
+    radial-gradient(circle at top, rgba(215, 171, 96, 0.14), transparent 28%),
+    linear-gradient(180deg, #0d1412 0%, #101816 100%);
+  color: var(--text);
+  font-family: "Avenir Next", "Trebuchet MS", sans-serif;
+}
+
+.shell {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  padding: 20px;
+}
+
+.panel {
+  width: min(100%, 480px);
+  padding: 24px;
+  border-radius: 28px;
+  background: var(--panel);
+  border: 1px solid var(--border);
+  box-shadow: 0 18px 60px rgba(0, 0, 0, 0.32);
+}
+
+.eyebrow {
+  margin: 0 0 8px;
+  color: var(--accent);
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  font-size: 0.75rem;
+}
+
+h1 {
+  margin: 0 0 12px;
+  font-family: "Iowan Old Style", "Palatino Linotype", serif;
+}
+
+.muted {
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.5;
+}
+
+.actions {
+  margin-top: 20px;
+}
+
+.manual {
+  display: grid;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+label {
+  color: var(--muted);
+}
+
+textarea {
+  width: 100%;
+  padding: 12px 14px;
+  color: var(--text);
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  resize: vertical;
+  font: inherit;
+}
+
+button {
+  min-height: 50px;
+  padding: 0 18px;
+  border: 0;
+  border-radius: 16px;
+  font: inherit;
+  cursor: pointer;
+}
+
+.primary-button {
+  width: 100%;
+  color: #101816;
+  font-weight: 700;
+  background: linear-gradient(135deg, var(--accent), #f0cd8d);
+}
+
+.secondary-button {
+  color: var(--text);
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid var(--border);
+}

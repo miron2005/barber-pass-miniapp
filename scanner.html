@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Barber Pass Scanner</title>
+    <meta name="description" content="Мини-приложение барбера для сканирования QR-кода клиента." />
+    <link rel="stylesheet" href="./scanner.css" />
+    <script src="https://telegram.org/js/telegram-web-app.js"></script>
+    <script type="module" src="./scanner.js"></script>
+  </head>
+  <body>
+    <main class="shell">
+      <section class="panel">
+        <p class="eyebrow">Barber Pass</p>
+        <h1>Сканер визитов</h1>
+        <p id="statusText" class="muted">
+          Нажми кнопку ниже, откроется нативный QR-сканер Telegram.
+        </p>
+
+        <div class="actions">
+          <button id="scanButton" class="primary-button" type="button">
+            Сканировать QR
+          </button>
+        </div>
+
+        <div class="manual">
+          <label for="manualToken">Резервный ввод кода</label>
+          <textarea
+            id="manualToken"
+            rows="4"
+            placeholder="Вставь token вручную, если сканер не сработал"
+          ></textarea>
+          <button id="sendManualButton" class="secondary-button" type="button">
+            Отправить код в бот
+          </button>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
